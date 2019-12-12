@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Project Name | Welcome</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.png" sizes="32x32" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+  <style>
+    .filters {
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    .filters ul {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .filters ul li {
+      display: inline-block;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin: 0 20px;
+      color: #000;
+    }
+
+    .filters ul li:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #023648;
+      opacity: 0;
+    }
+
+    .filters ul li.active {
+      color: #023648;
+    }
+
+    .filters ul li.active:after {
+      opacity: 1;
+    }
+
+    .how-to-post {
+      display: block;
+      margin-bottom: 60px;
+    }
+
+    .how-to-post figure {
+      display: flex;
+      width: 100%;
+      height: 300px;
+      background-color: #d8d8d8;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .how-to-post figure img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .how-to-post h2 {
+      color: #023648;
+      font-size: 24px;
+      margin: 0 0 20px;
+    }
+
+    .how-to-post .btn {
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      border-radius: 0px;
+      border: solid 2px #023648;
+    }
+
+    .how-to-post .btn-primary {
+      background: #023648;
+      color: #fff;
+    }
+
+    .popup {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      background: rgba(0, 0, 0, 0.75);
+      text-align: center;
+    }
+
+    .popup:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      margin-right: -4px;
+      vertical-align: middle;
+    }
+
+    .popup-inner {
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+      position: relative;
+      max-width: 915px;
+      width: 90%;
+      padding: 0px;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+      border-radius: 0px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .popup-inner .popup-header {
+      background: #638186;
+      color: #fff;
+      position: relative;
+      padding: 10px;
+    }
+
+    .popup-inner .popup-header p {
+      color: #fff;
+      margin: 0;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .popup-inner .popup-header .popup-close {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      color: #fff;
+    }
+
+    .popup-video {
+      padding: 100px;
+    }
+
+    .popup-video iframe {
+      display: block;
+      width: 100%;
+      height: 385px;
+    }
+  </style>
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/latest/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/latest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="text-center">
+      <h1>How To</h1>
+    </div>
+
+    <div class="filters filter-button-group">
+      <ul>
+        <li class="active" data-filter="*">All</li>
+        <li data-filter=".CategoryTitle1">Category Title</li>
+        <li data-filter=".CategoryTitle2">Category Title</li>
+      </ul>
+    </div>
+
+    <div class="content grid row">
+      <div class="single-content grid-item CategoryTitle1 col-lg-4">
+        <div class="how-to-post">
+          <figure></figure>
+          <h2>Title of How To Goes Here</h2>
+          <button type="button" class="btn btn-primary mb-3" data-pd-popup-open="WatchTutorialPopup">Watch
+            Tutorial</button>
+          <button type="button" class="btn btn-default">Read Transcript</button>
+        </div>
+      </div>
+
+      <div class="single-content grid-item CategoryTitle1 CategoryTitle2 col-lg-4">
+        <div class="how-to-post">
+          <figure></figure>
+          <h2>Title of How To Goes Here</h2>
+          <button type="button" class="btn btn-primary mb-3">Watch Tutorial</button>
+          <button type="button" class="btn btn-default">Read Transcript</button>
+        </div>
+      </div>
+
+      <div class="single-content grid-item CategoryTitle1 CategoryTitle2 col-lg-4">
+        <div class="how-to-post">
+          <figure></figure>
+          <h2>Title of How To Goes Here</h2>
+          <button type="button" class="btn btn-primary mb-3">Watch Tutorial</button>
+          <button type="button" class="btn btn-default">Read Transcript</button>
+        </div>
+      </div>
+
+      <div class="single-content grid-item CategoryTitle2 col-lg-4">
+        <div class="how-to-post">
+          <figure></figure>
+          <h2>Title of How To Goes Here</h2>
+          <button type="button" class="btn btn-primary mb-3">Watch Tutorial</button>
+          <button type="button" class="btn btn-default">Read Transcript</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="popup" data-pd-popup="WatchTutorialPopup">
+    <div class="popup-inner">
+      <div class="popup-header">
+        <p>Close Video Player</p>
+        <a class="popup-close" data-pd-popup-close="WatchTutorialPopup" href="#">X</a>
+      </div>
+
+      <div class="popup-video">
+        <iframe src="https://www.youtube.com/embed/9xwazD5SyVg" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- jQuery first, then Bootstrap JS. -->
+  <script src="jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+  <script src="custom.js"></script>
+</body>
+
+</html>
